@@ -1,10 +1,25 @@
+/* Generali */
 * {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
 
-/* Generali */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grey {
+  color: #717171;
+}
+
+.white {
+  color: #fff;
+}
 /* fine generali */
 
 .wrapper {
@@ -24,31 +39,78 @@ header {
   float: left;
   width: 300px;
   height: calc(100% - 80px);
-  background-color: yellow;
   display: flex;
   flex-direction: column;
+  background-color: #000;
 }
 
+/* Header logo */
 .logo {
   height: 80px;
+  line-height: 80px;
   flex-shrink: 0;
-  background-color: lightblue;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  transition: 0.4s;
 }
 
-nav {
-  height: calc(100% - 130px);
+.logo i {
+  font-size: 2.5rem;
 }
 
+.logo h2 {
+  display: inline-block;
+}
+
+.logo sup {
+  padding-left: 5px;
+  font-size: 1rem;
+}
+
+.logo:hover {
+  color: #717171;
+}
+/* fine header logo */
+
+/* Main nav */
 .main-nav {
-  height: 25%;
-  background-color: grey;
+  height: calc((100% - 130px) * 20%);
 }
 
+.main-nav ul li a {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #717171;
+  border-left: 3px solid #000;
+  transition: 0.4s;
+}
+
+.main-nav i {
+  padding-right: 10px;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.main-nav ul li:first-child a {
+  border-left: 3px solid lightgreen;
+  color: #fff;
+}
+
+.main-nav ul li a:hover {
+  border-left: 3px solid lightgreen;
+  color: #fff;
+}
+/* fine main nav */
+
+/* Second nav */
 .second-nav {
-  height: 75%;
+  height: calc((100% - 130px) * 80%);
   background-color: lightgrey;
   overflow-y: scroll;
 }
+/* fine second nav */
 
 .bottom-nav {
   height: 50px;
