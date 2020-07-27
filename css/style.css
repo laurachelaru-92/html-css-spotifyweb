@@ -1,0 +1,67 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* Generali */
+/* fine generali */
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
+
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Header laterale */
+header {
+  float: left;
+  width: 300px;
+  height: calc(100% - 80px);
+  background-color: yellow;
+}
+/* fine header laterale */
+
+/* Main */
+main {
+  float: right;
+  width: calc(100% - 300px);
+  height: calc(100% - 80px);
+  background-color: orange;
+}
+/* Barra upgrade */
+.upgrade {
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 300px);
+  height: 80px;
+}
+/* fine barra upgrade */
+/* Contenuto principale main */
+.content {
+  padding: 30px;
+  height: 100%;
+  overflow-y: scroll;
+}
+/* fine contenuto principale main */
+/* fine main */
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: pink;
+}
+/* fine footer */
