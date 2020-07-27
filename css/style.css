@@ -9,6 +9,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -43,7 +47,6 @@ header {
   flex-direction: column;
   background-color: #000;
 }
-
 /* Header logo */
 .logo {
   height: 80px;
@@ -87,10 +90,14 @@ header {
   transition: 0.4s;
 }
 
-.main-nav i {
+.main-nav i,
+.second-nav i {
   padding-right: 10px;
-  font-size: 1.5rem;
   vertical-align: middle;
+}
+
+.main-nav i {
+  font-size: 1.5rem;
 }
 
 .main-nav ul li:first-child a {
@@ -105,17 +112,68 @@ header {
 /* fine main nav */
 
 /* Second nav */
+.second-nav,
+.bottom-nav {
+  padding-left: 20px;
+}
+
 .second-nav {
   height: calc((100% - 130px) * 80%);
-  background-color: lightgrey;
   overflow-y: scroll;
+  padding-top: 10px;
+}
+
+.second-nav i {
+  font-size: 2.5rem;
+}
+
+.second-nav h4 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.second-nav a {
+  display: inline-block;
+  color: #717171;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.second-nav a:hover {
+  color: #fff;
 }
 /* fine second nav */
 
+/* Bottom nav */
 .bottom-nav {
-  height: 50px;
+  height: 80px;
   margin-top: auto;
+  font-size: 1.2rem;
+  background-color: violet;
 }
+
+.bottom-nav i {
+  padding-right: 10px;
+}
+
+.bottom-nav a {
+  color: #717171;
+  display: inline-block;
+  padding: 10px 20px 10px 0;
+}
+
+.bottom-nav h4 {
+  padding: 10px 20px 10px 0;
+  border-top: 2px solid #717171;
+}
+
+.fa-user-circle {
+  font-size: 2rem;
+}
+/* fine bottom nav */
 /* fine header laterale */
 
 /* Main */
@@ -155,3 +213,11 @@ footer {
   background-color: pink;
 }
 /* fine footer */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 993px) {
+  html {
+    font-size: 13px;
+  }
+}
+/* fine MEDIA QUERIES */
