@@ -25,6 +25,34 @@ header {
   width: 300px;
   height: calc(100% - 80px);
   background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 80px;
+  flex-shrink: 0;
+  background-color: lightblue;
+}
+
+nav {
+  height: calc(100% - 130px);
+}
+
+.main-nav {
+  height: 25%;
+  background-color: grey;
+}
+
+.second-nav {
+  height: 75%;
+  background-color: lightgrey;
+  overflow-y: scroll;
+}
+
+.bottom-nav {
+  height: 50px;
+  margin-top: auto;
 }
 /* fine header laterale */
 
