@@ -303,7 +303,7 @@ main {
   font-size: 0.9rem;
 }
 /* fine sezione "recently played" */
-/* Sezione "creato per" */
+/* Sezione "creato per" e "artisti popolari" */
 .creato-per h2,
 .artisti-popolari h2 {
   padding: 20px 0 5px 0;
@@ -313,7 +313,7 @@ main {
 .artisti-popolari > h5 {
   padding-bottom: 10px;
 }
-/* fine sezione "creato per" */
+/* fine sezione "creato per" e "artisti popolari" */
 /* fine contenuto principale main */
 /* fine main */
 
@@ -324,8 +324,24 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1;
   background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-left {
+  background-color: white;
+  flex-basis: 20%;
+}
+
+.player-middle {
+  background-color: lightgrey;
+  flex-basis: 40%;
+}
+
+.player-right {
+  background-color: darkblue;
+  flex-basis: 20%;
 }
 /* fine footer */
 
@@ -341,7 +357,9 @@ footer {
     font-size: 12px;
   }
 
-  .recently-played-item {
+  .recently-played-item,
+  .creato-per-item,
+  .artisti-popolari-item  {
     width: calc(100% / 4);
     flex-shrink: 0;
   }
@@ -351,7 +369,9 @@ footer {
     font-size: 12px;
   }
 
-  .recently-played-item {
+  .recently-played-item,
+  .creato-per-item,
+  .artisti-popolari-item  {
     width: calc(100% / 2);
     flex-shrink: 0;
   }
