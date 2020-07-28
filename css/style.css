@@ -39,7 +39,7 @@ a {
 }
 
 /* Header laterale */
-header {
+header.not-xs {
   float: left;
   width: 300px;
   height: calc(100% - 80px);
@@ -47,14 +47,16 @@ header {
   flex-direction: column;
   background-color: #000;
 }
+
+.logo, .main-nav, .bottom-nav {
+  flex-shrink: 0;
+}
+
 /* Header logo */
 .logo {
   height: 80px;
   line-height: 80px;
-  flex-shrink: 0;
-  padding-left: 20px;
   font-size: 1.5rem;
-  transition: 0.4s;
 }
 
 .logo i {
@@ -69,17 +71,9 @@ header {
   padding-left: 5px;
   font-size: 1rem;
 }
-
-.logo:hover {
-  color: #717171;
-}
 /* fine header logo */
 
 /* Main nav */
-.main-nav {
-  height: calc((100% - 130px) * 20%);
-}
-
 .main-nav ul li a {
   display: inline-block;
   padding: 8px 20px;
@@ -113,13 +107,14 @@ header {
 
 /* Second nav */
 .second-nav,
-.bottom-nav {
+.bottom-nav,
+.logo {
   padding-left: 20px;
 }
 
 .second-nav {
-  height: calc((100% - 130px) * 80%);
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-top: 10px;
 }
 
@@ -137,22 +132,26 @@ header {
   color: #717171;
   padding-top: 7px;
   padding-bottom: 7px;
-  font-size: 0.9rem;
+}
+
+.second-nav a, .bottom-nav a {
   font-weight: bold;
+  font-size: 0.9rem;
   transition: 0.4s;
 }
 
-.second-nav a:hover {
+.second-nav a:hover,
+.bottom-nav a:hover,
+header.xs a:hover {
   color: #fff;
 }
 /* fine second nav */
 
 /* Bottom nav */
 .bottom-nav {
-  height: 80px;
-  margin-top: auto;
   font-size: 1.2rem;
-  background-color: violet;
+  margin-top: auto;
+  padding-right: 20px;
 }
 
 .bottom-nav i {
@@ -168,9 +167,11 @@ header {
 .bottom-nav h4 {
   padding: 10px 20px 10px 0;
   border-top: 2px solid #717171;
+  font-size: 1rem;
 }
 
 .fa-user-circle {
+  vertical-align: middle;
   font-size: 2rem;
 }
 /* fine bottom nav */
@@ -191,6 +192,27 @@ main {
   right: 0;
   width: calc(100% - 300px);
   height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.upgrade a {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.upgrade a:hover {
+  background-color: #282828;
+  border: 2px solid #282828;
+  font-weight: bold;
 }
 /* fine barra upgrade */
 /* Contenuto principale main */
@@ -210,7 +232,7 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: pink;
+  background-color: #282828;
 }
 /* fine footer */
 
@@ -218,6 +240,75 @@ footer {
 @media screen and (min-width: 993px) {
   html {
     font-size: 13px;
+  }
+}
+@media screen and (min-width: 769px) an (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 577) and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  header.xs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+
+  header.not-xs {
+    display: none;
+  }
+
+  header.xs {
+    float: left;
+    height: calc(100% - 80px);
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 3rem;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header.xs .fa-spotify {
+    font-size: 4rem;
+    color: #fff;
+  }
+
+  header.xs .fa-arrow-circle-down {
+    font-size: 2rem;
+  }
+
+  header.xs .fa-user-circle {
+    font-size: 3.5rem;
+    color: #717171;
+  }
+
+  header.xs a {
+    display: block;
+    color: #717171;
+    transition: 0.4s;
+  }
+
+  header.xs > * > * {
+    padding-bottom: 5px;
+  }
+
+  .upgrade {
+    width: 100%;
   }
 }
 /* fine MEDIA QUERIES */
