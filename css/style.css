@@ -217,10 +217,48 @@ main {
 /* fine barra upgrade */
 /* Contenuto principale main */
 .content {
-  padding: 30px;
+  padding: 0 30px;
   height: 100%;
   overflow-y: scroll;
 }
+/* Barra di navigazione del main */
+.navigation {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 20px 10px;
+  color: #717171;
+  font-weight: bold;
+  transition: 0.4s;
+  font-size: 0.9rem;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+.navigation ul li a:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 5px;
+  border-bottom: 2px solid #141922;
+  transition: 0.4s;
+}
+
+.navigation ul li a:hover:after {
+  border-bottom: 2px solid lightgreen;
+}
+/* Barra di navigazione del main */
 /* fine contenuto principale main */
 /* fine main */
 
