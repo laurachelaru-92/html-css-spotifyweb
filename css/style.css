@@ -327,21 +327,148 @@ footer {
   background-color: #282828;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+footer a {
+  font-size: 1.2rem;
+}
+
+footer .fa-play-circle {
+  font-size: 2.2rem;
+  vertical-align: middle;
+}
+
+.player-left,
+.player-middle,
+.player-right {
+  height: 70%;
+}
+
+.player-left,
+.player-right {
+  flex-basis: 25%;
 }
 
 .player-left {
-  background-color: white;
-  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.player-left img {
+  max-height: 100%;
+}
+
+.player-album-title {
+  padding-left: 5px;
+  flex-basis: 50%;
+  max-height: 100%;
+  overflow-y: hidden;
+}
+
+.player-album-title h4 {
+  font-size: 0.8rem;
+}
+
+.player-album-title h5 {
+  font-size: 0.7rem;
+}
+
+.player-middle-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-left-icons a,
+.player-middle-icons a {
+  color: #717171;
+  transition: 0.4s;
+  padding: 0 5px;
+}
+
+.player-left-icons a:hover {
+  color: #fff;
 }
 
 .player-middle {
-  background-color: lightgrey;
-  flex-basis: 40%;
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.player-minutes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.player-minutes .background-player {
+  flex-grow: 2;
+  margin: 0 10px;
+}
+
+.background-player {
+  border-bottom: 3px solid #717171;
+  border-radius: 3px;
+  position: relative;
+}
+
+.foreground-player {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  border-bottom: 3px solid #fff;
+  border-radius: 3px;
+}
+
+.foreground-player i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+  font-size: 10px;
+  display: none;
+}
+
+.foreground-player:hover .fa-circle{
+  display: block;
+}
+
+.player-minutes > span:first-child,
+.player-minutes > span:last-child {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.player-middle-icons a {
+  color: #fff;
+}
+
+.player-middle-icons a:hover {
+  color: #717171;
 }
 
 .player-right {
-  background-color: darkblue;
-  flex-basis: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-right .background-player {
+  flex-grow: 2;
+}
+
+.player-right a {
+  padding: 5px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.player-right a:hover {
+  color: #717171;
 }
 /* fine footer */
 
@@ -374,6 +501,11 @@ footer {
   .artisti-popolari-item  {
     width: calc(100% / 2);
     flex-shrink: 0;
+  }
+
+  .player-left h4,
+  .player-left h5 {
+    font-size: 0.7rem;
   }
 }
 
@@ -444,6 +576,25 @@ footer {
   .artisti-popolari-item {
     width: calc(100% / 2);
     flex-shrink: 0;
+  }
+
+  footer {
+    padding: 5px;
+  }
+
+  .player-left,
+  .player-middle,
+  .player-right {
+    flex-basis: calc(100% / 3);
+  }
+
+  .player-middle {
+    padding: 0 10px;
+  }
+
+  .player-left h4,
+  .player-left h5 {
+    font-size: 0.7rem;
   }
 }
 /* fine MEDIA QUERIES */
