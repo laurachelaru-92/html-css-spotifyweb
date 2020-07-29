@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
   </head>
   <body>
     <!-- Wrapper -->
     <div class="wrapper">
       <!-- Header laterale -->
       <header class="not-xs grey">
-        <a href="#" class="logo white">
-          <i class="fab fa-spotify"></i>
-          <h2>Spotify</h2><sup>&reg;</sup>
+        <a href="#" class="logo">
+          <img src="img/logo.svg" alt="spotify logo">
         </a>
         <div class="main-nav">
           <ul>
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-search"></i>Cerca</a></li>
-            <li><a href="#"><i class="fas fa-headphones-alt"></i>La tua libreria</a></li>
+            <li><a href="#"><img src="img/home.svg" alt="home logo">Home</a></li>
+            <li><a href="#"><img src="img/search.svg" alt="search logo">Cerca</a></li>
+            <li><a href="#"><img src="img/libreria.svg" alt="music library logo">La tua libreria</a></li>
           </ul>
         </div>
         <div class="second-nav">
@@ -38,20 +38,26 @@
           </ul>
         </div>
         <div class="bottom-nav">
-          <a href="#"><i class="fas fa-arrow-circle-down"></i>Installa App</a>
-          <h4><i class="far fa-user-circle"></i>Laura Ch.</h4>
+          <div class="installa-app">
+            <a href="#">
+              <img src="img/download.svg" alt="download icon">Installa App</a>
+          </div>
+          <div class="profilo white">
+            <img src="img/profile.svg" alt="profile picture">
+            <h4>Laura Ch.</h4>
+          </div>
         </div>
       </header>
       <header class="xs">
         <nav class="nav-xs-top">
-          <a href="#"><i class="fab fa-spotify"></i></a>
-          <a href="#"><i class="fas fa-home"></i></a>
-          <a href="#"><i class="fas fa-search"></i></a>
-          <a href="#"><i class="fas fa-headphones-alt"></i></a>
+          <a href="#"><img src="img/logo-small.svg" alt="spotify small logo" class="logo-xs"></a>
+          <a href="#"><img src="img/home.svg" alt="home logo"></a>
+          <a href="#"><img src="img/search.svg" alt="search logo"></a>
+          <a href="#"><img src="img/libreria.svg" alt="music library logo"></a>
         </nav>
         <nav class="nav-xs-bottom">
-          <a href="#"><i class="fas fa-arrow-circle-down"></i></a>
-          <i class="far fa-user-circle"></i>
+          <a href="#"><img src="img/download.svg" alt="download icon"></a>
+          <img src="img/profile.svg" alt="profile icon" class="profile-xs">
         </nav>
       </header>
       <!-- / header laterale -->

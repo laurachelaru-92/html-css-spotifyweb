@@ -52,24 +52,20 @@ header.not-xs {
   flex-shrink: 0;
 }
 
+.logo,
+.second-nav,
+.bottom-nav {
+  padding-left: 20px;
+}
 /* Header logo */
 .logo {
-  height: 80px;
-  line-height: 80px;
-  font-size: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.logo i {
-  font-size: 2.5rem;
-}
-
-.logo h2 {
-  display: inline-block;
-}
-
-.logo sup {
-  padding-left: 5px;
-  font-size: 1rem;
+.logo img {
+  width: 60%;
+  height: auto;
 }
 /* fine header logo */
 
@@ -84,7 +80,11 @@ header.not-xs {
   transition: 0.4s;
 }
 
-.main-nav i,
+.main-nav ul li img {
+  width: 35px;
+}
+
+.main-nav img,
 .second-nav i {
   padding-right: 10px;
   vertical-align: middle;
@@ -106,12 +106,6 @@ header.not-xs {
 /* fine main nav */
 
 /* Second nav */
-.second-nav,
-.bottom-nav,
-.logo {
-  padding-left: 20px;
-}
-
 .second-nav {
   overflow-x: hidden;
   overflow-y: auto;
@@ -154,25 +148,38 @@ header.xs a:hover {
   padding-right: 20px;
 }
 
-.bottom-nav i {
-  padding-right: 10px;
+.bottom-nav img {
+  vertical-align: middle;
 }
 
-.bottom-nav a {
+.installa-app img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.installa-app a {
   color: #717171;
   display: inline-block;
   padding: 10px 20px 10px 0;
 }
 
-.bottom-nav h4 {
-  padding: 10px 20px 10px 0;
+.profilo {
   border-top: 2px solid #717171;
-  font-size: 1rem;
+  padding: 10px 20px 10px 0;
 }
 
-.fa-user-circle {
-  vertical-align: middle;
-  font-size: 2rem;
+.profilo img {
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.profilo h4 {
+  display: inline-block;
+  font-size: 1.1rem;
 }
 /* fine bottom nav */
 /* fine header laterale */
@@ -458,6 +465,10 @@ footer .fa-play-circle {
   display: block;
 }
 
+.foreground-player:hover {
+  border-bottom: 3px solid lightgreen;
+}
+
 .player-minutes > span:first-child,
 .player-minutes > span:last-child {
   font-weight: bold;
@@ -483,7 +494,7 @@ footer .fa-play-circle {
 }
 
 .player-right a {
-  padding: 5px;
+  padding: 5px 10px;
   color: #fff;
   transition: 0.4s;
 }
@@ -505,21 +516,18 @@ footer .fa-play-circle {
     font-size: 12px;
   }
 
-  .item,
-  .creato-per-item,
-  .artisti-popolari-item  {
+  .item {
     width: calc(100% / 4);
     flex-shrink: 0;
   }
 }
+
 @media screen and (min-width: 577px) and (max-width: 768px) {
   html {
     font-size: 12px;
   }
 
-  .item,
-  .creato-per-item,
-  .artisti-popolari-item  {
+  .item {
     width: calc(100% / 2);
     flex-shrink: 0;
   }
@@ -527,6 +535,10 @@ footer .fa-play-circle {
   .player-left h4,
   .player-left h5 {
     font-size: 0.7rem;
+  }
+
+  .player-right a {
+    padding: 5px;
   }
 }
 
@@ -553,35 +565,48 @@ footer .fa-play-circle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 2.5rem;
     text-align: center;
     padding: 15px;
     position: relative;
     z-index: 1;
   }
 
-  header.xs .fa-spotify {
-    font-size: 3.5rem;
-    color: #fff;
-  }
-
-  header.xs .fa-arrow-circle-down {
-    font-size: 2rem;
-  }
-
-  header.xs .fa-user-circle {
-    font-size: 3rem;
-    color: #717171;
-  }
-
   header.xs a {
     display: block;
-    color: #717171;
+    color: #fff;
     transition: 0.4s;
   }
 
   header.xs > * > * {
     padding-bottom: 5px;
+  }
+
+  header.xs .logo-xs {
+    width: 40px;
+  }
+
+  header.xs .nav-xs-top img:not(.logo-xs) {
+    width: 32px;
+  }
+
+  header.xs .nav-xs-top img:not(.logo-xs):hover {
+    width: 35px;
+  }
+
+  header.xs .nav-xs-bottom a img {
+    width: 28px;
+  }
+
+  header.xs .nav-xs-bottom a img:hover {
+    width: 30px;
+  }
+
+  header.xs .profile-xs {
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    background-color: grey;
+    border-radius: 50%;
   }
 
   .upgrade {
@@ -592,9 +617,7 @@ footer .fa-play-circle {
     width: calc(100% - 70px);
   }
 
-  .item,
-  .creato-per-item,
-  .artisti-popolari-item {
+  .item {
     width: calc(100% / 2);
     flex-shrink: 0;
   }
@@ -616,6 +639,10 @@ footer .fa-play-circle {
   .player-left h4,
   .player-left h5 {
     font-size: 0.7rem;
+  }
+
+  .player-right a {
+    padding: 5px;
   }
 }
 /* fine MEDIA QUERIES */
