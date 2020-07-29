@@ -192,6 +192,7 @@ main {
   right: 0;
   width: calc(100% - 250px);
   height: 80px;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -266,9 +267,7 @@ main {
   padding: 10px 0;
 }
 
-.recently-played-container,
-.creato-per-container,
-.artisti-popolari-container {
+.container {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -276,29 +275,31 @@ main {
   text-align: center;
 }
 
-.recently-played-item,
-.creato-per-item,
-.artisti-popolari-item {
+.item {
   width: calc(100% / 6);
-  padding: 5px;
+  position: relative;
 }
 
-.recently-played-item img,
-.creato-per img,
-.artisti-popolari img {
+.item:not(last-child) {
+  padding-right: 7px;
+}
+
+.item .image {
+  position: relative;
+}
+
+.item img {
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
-.recently-played-item h4,
-.creato-per h4,
-.artisti-popolari h4 {
+.item h4 {
   font-size: 1rem;
   padding: 10px 0 5px 0;
 }
 
-.recently-played-item h5,
-.creato-per h5,
-.artisti-popolari h5 {
+.item h5 {
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -310,8 +311,28 @@ main {
 }
 
 .creato-per > h5,
-.artisti-popolari > h5 {
+.artisti-popolari > h5,
+.recently-played h5  {
   padding-bottom: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+.overlay i {
+  margin: auto;
+  font-size: 30px;
+}
+
+.item:hover .overlay {
+  display: flex;
 }
 /* fine sezione "creato per" e "artisti popolari" */
 /* fine contenuto principale main */
@@ -484,7 +505,7 @@ footer .fa-play-circle {
     font-size: 12px;
   }
 
-  .recently-played-item,
+  .item,
   .creato-per-item,
   .artisti-popolari-item  {
     width: calc(100% / 4);
@@ -496,7 +517,7 @@ footer .fa-play-circle {
     font-size: 12px;
   }
 
-  .recently-played-item,
+  .item,
   .creato-per-item,
   .artisti-popolari-item  {
     width: calc(100% / 2);
@@ -571,7 +592,7 @@ footer .fa-play-circle {
     width: calc(100% - 70px);
   }
 
-  .recently-played-item,
+  .item,
   .creato-per-item,
   .artisti-popolari-item {
     width: calc(100% / 2);
