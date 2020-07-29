@@ -278,13 +278,15 @@ main {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */    /*tolto per versione box nascosti*/
   text-align: center;
+  overflow-x: hidden;  /*aggiunto per versione box nascosti*/
 }
 
 .item {
   width: calc(100% / 6);
   position: relative;
+  flex-shrink: 0;  /*aggiunto per versione box nascosti*/
 }
 
 .item:not(last-child) {
