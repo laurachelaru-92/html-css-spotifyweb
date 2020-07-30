@@ -295,6 +295,7 @@ main {
 
 .item .image {
   position: relative;
+  font-size: 0;
 }
 
 .item img {
@@ -325,6 +326,10 @@ main {
   padding-bottom: 10px;
 }
 
+.artisti-popolari .item .image > * {
+  border-radius: 50%;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -342,6 +347,7 @@ main {
 
 .item:hover .overlay {
   display: flex;
+  cursor: pointer;
 }
 /* fine sezione "creato per" e "artisti popolari" */
 /* fine contenuto principale main */
@@ -381,6 +387,7 @@ footer .fa-play-circle {
   flex-basis: 25%;
 }
 
+/* Footer sinistra */
 .player-left {
   display: flex;
   align-items: center;
@@ -420,6 +427,13 @@ footer .fa-play-circle {
 
 .player-left-icons a:hover {
   color: #fff;
+}
+
+/* fine footer sinistra */
+
+/* Footer centrale */
+.player-middle .fa-play-circle:hover {
+  font-size: 2.5rem;
 }
 
 .player-middle {
@@ -484,7 +498,9 @@ footer .fa-play-circle {
 .player-middle-icons a:hover {
   color: #717171;
 }
+/* fine footer centrale */
 
+/* Footer destra */
 .player-right {
   display: flex;
   justify-content: space-between;
@@ -504,6 +520,7 @@ footer .fa-play-circle {
 .player-right a:hover {
   color: #717171;
 }
+/* fine footer destra */
 /* fine footer */
 
 /* MEDIA QUERIES */
